@@ -1,7 +1,7 @@
 FROM python as compiler
 ENV PYTHONUNBUFFERED 1
 
-RUN apk update
+RUN apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 
 WORKDIR /app/
 
